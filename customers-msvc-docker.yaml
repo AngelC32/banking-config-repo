@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: "mongodb://localhost:27017"
+      uri: "mongodb://mongo:27017"
       database: customersDb
   jpa:
     hibernate:
@@ -30,4 +30,4 @@ logging:
 
 accounts:
   service:
-    url: http://localhost:8082
+    url: http://accounts-msvc:8082

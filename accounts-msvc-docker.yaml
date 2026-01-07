@@ -1,0 +1,30 @@
+spring:
+  data:
+    mongodb:
+      uri: "mongodb://mongo:27017"
+      database: accountsDb
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+  jackson:
+    mapper:
+      sort-properties-alphabetically: false
+
+server:
+  port: 8082
+
+customers:
+  service:
+    url: http://customers-msvc:8080
+
+transactions:
+  service:
+    url: http://transactions-msvc:8081
+logging:
+  level:
+    root: INFO
+    app: DEBUG
+    mongo: WARN
+  file:
+    name: logs/accounts-msvc.log
