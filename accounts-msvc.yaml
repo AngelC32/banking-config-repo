@@ -16,11 +16,11 @@ server:
 
 customers:
   service:
-    url: http://localhost:8090/api
+    url: lb://customers-msvc/api
 
 transactions:
   service:
-    url: http://localhost:8090/api
+    url: lb://transactions-msvc/api
 
 logging:
   level:
@@ -29,3 +29,10 @@ logging:
     mongo: WARN
   file:
     name: logs/accounts-msvc.log
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
