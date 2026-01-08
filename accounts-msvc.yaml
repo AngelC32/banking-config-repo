@@ -16,11 +16,11 @@ server:
 
 customers:
   service:
-    url: lb://customers-msvc/api
+    url: lb://customers-msvc
 
 transactions:
   service:
-    url: lb://transactions-msvc/api
+    url: lb://transactions-msvc
 
 logging:
   level:
