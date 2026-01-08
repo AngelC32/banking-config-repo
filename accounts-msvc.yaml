@@ -16,11 +16,11 @@ server:
 
 customers:
   service:
-    url: http://localhost:8080
+    url: http://localhost:8090/api
 
 transactions:
   service:
-    url: http://localhost:8081
+    url: http://localhost:8090/api
 
 logging:
   level:
