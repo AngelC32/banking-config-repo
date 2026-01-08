@@ -16,11 +16,11 @@ server:
 
 customers:
   service:
-    url: http://customers-msvc:8080
+    url: lb://customers-msvc
 
 transactions:
   service:
-    url: http://transactions-msvc:8081
+    url: lb://transactions-msvc
 logging:
   level:
     root: INFO
@@ -28,3 +28,11 @@ logging:
     mongo: WARN
   file:
     name: logs/accounts-msvc.log
+
+# Eureka config
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

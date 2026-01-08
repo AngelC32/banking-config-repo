@@ -21,3 +21,11 @@ logging:
     mongo: WARN
   file:
     name: logs/transactions-msvc.log
+
+# Eureka config
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE:http://localhost:8761/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
