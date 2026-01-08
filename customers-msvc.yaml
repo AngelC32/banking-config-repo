@@ -30,7 +30,7 @@ logging:
 
 accounts:
   service:
-    url: lb://accounts-msvc/api
+    url: lb://accounts-msvc
 
 eureka:
   client:
